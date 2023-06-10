@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom'
+import React from 'react';
+import "../Footer/footer.scss"
 
 function Footer() {
-    return (
-        <nav>
-            <Link to=""></Link>
-            <Link to=""></Link>
-        </nav>
-    )
+  return (
+    <footer>
+      <p>Ceci est le pied de page de mon application.</p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

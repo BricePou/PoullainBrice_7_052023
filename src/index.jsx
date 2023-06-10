@@ -1,21 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Layout from "./pages/Layout/layout";
+import Home from "./pages/Home/home";
+import About from "./pages/About/about";
+import Accomodations from "./pages/Accommodations/accommodations";
+import Error from "./pages/Error/error";
 
-
-ReactDOM.render(
-  <React.StrictMode>
-    <Router>
+function Router() {
+  return (
+    <BrowserRouter>
       <Routes>
-        <Route path="" element={<something />} />
-        <Route path="" element={<something />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="About" element={<About />} />
+          <Route path="Accomodations" element={<Accomodations />} />
+          <Route path="Error" element={<Error />} />
+        </Route>
       </Routes>
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+    </BrowserRouter>
+  );
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+export default Router
 
