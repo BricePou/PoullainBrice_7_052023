@@ -1,0 +1,14 @@
+.About{
+    margin-bottom: 80px;
+    .Accueil {
+        display: flex;
+        justify-content: center;
+        img {
+          border-radius: 25px;
+          height: 223px;
+          width: 100%;
+          max-width: 1240px;
+          object-fit: cover;
+        }
+      }
+}

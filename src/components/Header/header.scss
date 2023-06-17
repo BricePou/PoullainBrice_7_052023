@@ -1,0 +1,36 @@
+header {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    flex-basis: 100%;
+    margin: 0;
+    padding: 0;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      :hover {
+        text-decoration: underline;
+      }
+      a {
+        text-decoration: none;
+        font-size: 24px;
+        color: #ff6060;
+        flex-basis: auto;
+        min-width: 90px;
+      }
+    }
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-basis: 20%;
+  }
+}

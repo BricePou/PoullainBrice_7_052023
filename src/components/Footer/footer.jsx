@@ -1,10 +1,11 @@
-import React from 'react';
+import logo from "../../assets/LOGOfooter.png"
 import "../Footer/footer.scss"
 
 function Footer() {
   return (
     <footer>
-      <p>Ceci est le pied de page de mon application.</p>
+      <img src={logo} alt="" />
+      <p>c 2020 Kasa. All rights reserved</p>
     </footer>
   );
 }
