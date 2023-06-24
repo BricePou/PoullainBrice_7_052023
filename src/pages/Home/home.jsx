@@ -11,17 +11,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../Accommodations/accommodations.scss"
 
 function App() {
-  // useEffect(() => {
-  //   fetch(
-  //     "http://localhost:3000/../public/logements"
-  //   ).then((resp) => {
-  //     if (resp.ok) {
-  //       return resp.json();
-  //     }
-  //   }).then(logements => {
-  //     console.log(logements.results)
-  //   })
-  // }, [])
+  useEffect(() => {
+    fetch(
+      "logements.json"
+    ).then((resp) => {
+      if (resp.ok) {
+        return resp.json();
+      }
+    }).then(logements => {
+      console.log(logements)
+    })
+  }, [])
   return (
     <div className="Home">
       <div>
