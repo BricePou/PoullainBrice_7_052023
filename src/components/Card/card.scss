@@ -1,0 +1,32 @@
+
+.Other{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 56px;
+    .Card{
+        background: linear-gradient(180deg, rgba(255, 96, 96, 1) 0%, rgb(177, 80, 80) 100%);
+        width: 340px;
+        height: 340px;
+        border-radius: 10px;
+        p{
+            display: flex;
+            height: 100%;
+            color: white;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .Home{
+      .Cards{
+        .Card{
+            max-width: 100%;
+            max-height: 255px;
+            
+        }
+      }
+    }
+  }

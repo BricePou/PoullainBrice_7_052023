@@ -1,0 +1,48 @@
+header {
+  max-width: 1240px;
+  margin: auto;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  max-height: 100px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+    margin: auto;
+    padding: 0
+  ;
+    list-style-type: none;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      :hover {
+        text-decoration: underline;
+      }
+      .font {
+        display: flex;
+        padding-left: 10px;
+        text-decoration: none;
+        color: #ff6060;
+        font-size: 1.5em;
+        font-size : clamp(1rem, 2.5vw, 1.5rem);
+        flex-basis: auto;
+      }
+    }
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 25%;
+  }
+}
+.LogoHeader{
+  height: auto;
+  width: 100%;
+}
