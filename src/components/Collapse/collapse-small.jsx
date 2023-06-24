@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import "../Collapse/collapse.scss";
+import "../Collapse/collapse-small.scss";
 import Chevron from "../Collapse/chevron";
 
-const Collapsible = (props) => {
+const CollapsibleSmall = (props) => {
   const [open, setOPen] = useState(false);
   const toggle = () => {
     setOPen(!open);
@@ -28,4 +28,4 @@ const Collapsible = (props) => {
   );
 };
 
-export default Collapsible;
+export default CollapsibleSmall;

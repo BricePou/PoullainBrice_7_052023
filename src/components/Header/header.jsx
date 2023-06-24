@@ -6,12 +6,12 @@ function Header() {
   return (
     <header>
       <div>
-      <img src={logo} alt="" />
+      <img className="LogoHeader" src={logo} alt="" />
       </div>
       <nav>
         <ul>
-          <li><a href="/">Accueil</a></li>
-          <li><a href="/about">A propos</a></li>
+          <li><a href="/" className="font">Accueil</a></li>
+          <li><a href="/about" className="font">A propos</a></li>
         </ul>
       </nav>
     </header>

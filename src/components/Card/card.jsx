@@ -13,11 +13,6 @@ function Location() {
   return (
     <div className="Other">
       <Card name="Brice" />
-      <Card name="Brice" />
-      <Card name="Brice" />
-      <Card name="Brice" />
-      <Card name="Brice" />
-      <Card name="Brice" />
     </div>
   );
 }
