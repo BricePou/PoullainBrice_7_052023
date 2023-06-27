@@ -4,12 +4,17 @@ import Tag from "../../components/Tag/tag";
 import CollapseSmall from "../../components/Collapse/collapse-small";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../Accommodations/accommodations.scss"
+import "../Accommodations/accommodations.scss";
+// import Slider from "../../components/Slider/slider";
+// import Tag from "../../components/Tag/tag";
+// import CollapseSmall from "../../components/Collapse/collapse-small";
+// import { faStar } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   return (
     <div className="Home">
-      <div>
+            <div>
         <Slider />
       </div>
       <div className="informations">
@@ -19,8 +24,10 @@ function App() {
           <Tag />
         </div>
         <div className="Second-part">
-            <p className='porpiétaire'>Propriétaire</p>
+          <div>
+          <p className='propiétaire'>Propriétaire</p>
             <img src="" alt="" className='photoproprio'/>
+          </div>
           <div>
             <span>
               <i className="star-pink"><FontAwesomeIcon icon={faStar} /></i>

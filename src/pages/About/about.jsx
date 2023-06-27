@@ -10,7 +10,7 @@ function App() {
         <img src={Image} alt="" />
       </div>
       <div className="List">
-        <Collapse label="Fiabilité">
+        <Collapse layout="full" label="Fiabilité">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
             photos sont conformes aux logements, et toutes les informations sont
