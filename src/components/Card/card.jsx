@@ -1,21 +1,18 @@
 import "../Card/card.scss"
 import React from "react"
+import { Link } from 'react-router-dom'
 
-class Card extends React.Component {
-  render() {
-    return <div className="Card">
-      <p>{this.props.name}</p>
-    </div>
-  }
+function Card({ link, cover, title }) {
+	return (
+		<div className="Card">
+			<Link to={link}>
+				<div className="Card-cover">
+					<img src={cover} alt="" />
+				</div>
+				<h2 className="Card-title">{title}</h2>
+			</Link>
+		</div>
+	)
 }
 
-function Location() {
-  return (
-    <div className="Other">
-      <Card name="Brice" />
-    </div>
-  );
-}
-
-
-export default Location;
+export default Card

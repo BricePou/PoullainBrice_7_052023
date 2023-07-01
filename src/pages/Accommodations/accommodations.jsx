@@ -1,58 +1,60 @@
-import React from 'react';
+import React from "react";
+import useFetch from "../../useFetch/useFetch";
+import { useParams } from "react-router-dom";
 import Slider from "../../components/Slider/slider";
+import Star from "../../components/Star/star";
 import Tag from "../../components/Tag/tag";
-import CollapseSmall from "../../components/Collapse/collapse-small";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Collapse from "../../components/Collapse/collapse";
 import "../Accommodations/accommodations.scss";
-// import Slider from "../../components/Slider/slider";
-// import Tag from "../../components/Tag/tag";
-// import CollapseSmall from "../../components/Collapse/collapse-small";
-// import { faStar } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function App() {
-  return (
-    <div className="Home">
-            <div>
-        <Slider />
-      </div>
-      <div className="informations">
-        <div className="First-part">
-          <h1 className='title'>titre a importer</h1>
-          <p className='localistation'>locatlisation</p>
-          <Tag />
-        </div>
-        <div className="Second-part">
-          <div>
-          <p className='propiétaire'>Propriétaire</p>
-            <img src="" alt="" className='photoproprio'/>
+function Logement() {
+  const logements = useFetch(window.location + "logements.json");
+  const {logementId} = useParams();
+  let thisLogement;
+  console.log(window.location +"logements.json")
+  if (logements.fetchedData) {
+    thisLogement = logements.fetchedData.find(
+      (logement) => logement.id === logementId
+    );
+  } else {
+    const [firstName, lastName] = thisLogement.host.name.split("");
+    document.title = thisLogement.title + "- Kasa";
+    return (
+      <div>
+        <Slider images={thisLogement.pictures} />
+        <div className="">
+          <div className="titre-localisation-tag">
+            <h1 className="titre">{thisLogement.title}</h1>
+            <p className="localisation">{thisLogement.location}</p>
+            <div className="tag">
+              {thisLogement.tags.map((tag, index) => (
+                <Tag tagName={tag} key={`${tag}-${index}`} />
+              ))}
+            </div>
           </div>
-          <div>
-            <span>
-              <i className="star-pink"><FontAwesomeIcon icon={faStar} /></i>
-              <i className="star-pink"><FontAwesomeIcon icon={faStar} /></i>
-              <i className="star-pink"><FontAwesomeIcon icon={faStar} /></i>
-              <i className="star-grey"><FontAwesomeIcon icon={faStar} /></i>
-              <i className="star-grey"><FontAwesomeIcon icon={faStar} /></i>
-            </span>
+          <div className="star-hote-truc">
+            <Star star={thisLogement.rating} />
+            <div className="">
+              <div className="hote">
+                {firstName}
+                <br />
+                {lastName}
+              </div>
+              <img
+                className="host-picture"
+                src={thisLogement.host.picture}
+                alt="Host"
+              />
+            </div>
           </div>
         </div>
         <div>
-        <CollapseSmall label="Description">
-          <p>
-            import
-          </p>
-        </CollapseSmall>
-        <CollapseSmall label="Equipements">
-          <p>
-            import
-          </p>
-        </CollapseSmall>
+          <Collapse />
+          <Collapse />
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
-export default App;
+export default Logement;

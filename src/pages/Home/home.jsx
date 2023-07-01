@@ -1,37 +1,33 @@
-import React, { useEffect } from "react";
-// import Tag from "../../components/Tag/tag"
+import  useFetch  from "../../useFetch/useFetch";
 import Card from "../../components/Card/card";
 import Banner from "../../components/Banner/banner";
 import "../Home/home.scss";
 import "../Accommodations/accommodations.scss";
 
 function App() {
-  useEffect(() => {
-    fetch("logements.json")
-      .then((resp) => {
-        if (resp.ok) {
-          return resp.json();
-        }
-      })
-      .then((logements) => {
-        console.log(logements);
-      });
-  }, []);
+  const logements = useFetch(window.location + "logements.json");
+
   return (
     <div className="Home">
-      <div>
+      <div className="Banner">
         <Banner />
       </div>
-      <div className="Cards">
-        <Card name="Brice" />
-        <Card name="Brice" />
-        <Card name="Brice" />
-        <Card name="Brice" />
-        <Card name="Brice" />
-        <Card name="Brice" />
-      </div>
+      {logements.fetchedData && (
+        <div className="Cards">
+          {logements.fetchedData.map((files) => (
+            <Card
+              key={files.id}
+              link={`/accomodation/${files.id}`}
+              title={files.title}
+              cover={files.cover}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
 
 export default App;
+
+// "logements.json"
