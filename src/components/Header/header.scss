@@ -15,8 +15,7 @@ header {
     justify-content: space-between;
     flex-basis: 100%;
     margin: auto;
-    padding: 0
-  ;
+    padding: 0;
     list-style-type: none;
     li {
       display: flex;
@@ -31,7 +30,7 @@ header {
         text-decoration: none;
         color: #ff6060;
         font-size: 1.5em;
-        font-size : clamp(1rem, 2.5vw, 1.5rem);
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
         flex-basis: auto;
       }
     }
@@ -41,8 +40,19 @@ header {
     justify-content: space-between;
     flex-basis: 25%;
   }
+  div{
+    width: auto;
+    .LogoHeader{
+      width: 100%;
+      height: auto;
+    }
+  }
 }
-.LogoHeader{
-  height: auto;
-  width: 100%;
+
+
+@media only screen and (max-width: 700px) {
+  .LogoHeader {
+    height: 145px;
+    width: 47px;
+  }
 }

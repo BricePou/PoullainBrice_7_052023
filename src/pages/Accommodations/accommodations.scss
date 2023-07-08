@@ -1,16 +1,92 @@
-.informations {
-    .First-part{
-        .title{
-            color: #FF6060;
+.content {
+  padding: 20px;
+  .Accomodations {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .truc {
+      width: 1240px;
+      .informations {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1240px;
+        margin-top: 20px;
+        .titre-localisation-tag {
+          .titre {
+            color: #ff6060;
+            font-size: clamp(1rem, 2.5vw, 4rem);
+          }
+          .localisation {
+            color: #ff6060;
+            padding-top: 3px;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+          }
+          .tag {
+            display: flex;
+            padding-top: 15px;
+            .Tag {
+              margin-right: 15px;
+            }
+          }
         }
-        .localistation{
-            color: #FF6060;
+        .name-host-star {
+          .name-host {
+            display: flex;
+            align-items: center;
+            .name {
+              color: #ff6060;
+            }
+            img {
+              width: 65px;
+              border-radius: 100px;
+            }
+          }
+          .stars {
+            margin-top: 10px;
+            .star,
+            .empty-star {
+              padding-left: 10px;
+            }
+          }
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
         }
+      }
     }
-    .Second-part{
-        .propiétaire{
-            color: #FF6060;
+  }
+}
+@media screen and (max-width: 700px) {
+  .Accomodations {
+    .truc {
+      .informations {
+        flex-wrap: wrap;
+        .titre-localisation-tag {
+          .titre {
+          }
+          .localisation {
+          }
+          .tag {
+            .Tag {
+            }
+          }
         }
+        .name-host-star {
+          flex-direction: row-reverse;
+          .name-host {
+            .name {
+            }
+            img {
+            }
+          }
+          .stars {
+            .star,
+            .empty-star {
+            }
+          }
+        }
+      }
     }
-
+  }
 }

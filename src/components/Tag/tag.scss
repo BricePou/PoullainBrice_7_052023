@@ -1,14 +1,16 @@
 .Tag{
     background-color: #FF6060;
-    width: 115px;
+    min-width: 95px;
     height: 25px;
     border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     p{
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
         color: white;
-        font-size: 14px;
+        font-size: 0.9em;
     }
 }

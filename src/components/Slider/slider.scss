@@ -1,0 +1,28 @@
+.slider{
+    position: relative;
+    z-index: 1;
+    img{
+        height: 415px;
+        width: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+    .left-chevron{
+        position: absolute;
+        z-index: 5;
+        top: 180px;
+        left: 20px;
+        width: 5rem;
+        height: 5rem;
+        color: #FFFFFF;
+    }
+    .right-chevron{
+        position: absolute;
+        z-index: 5;
+        top: 180px;
+        right: 20px;
+        width: 5rem;
+        height: 5rem;
+        color: #FFFFFF;
+    }
+}

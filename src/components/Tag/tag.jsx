@@ -3,8 +3,10 @@ import "../Tag/tag.scss"
 
 function Tag({ tagName }) {
   return (
-    <div>
+    <div className="Tag">
+      <p>
       {tagName}
+      </p>
     </div>
   );
 }

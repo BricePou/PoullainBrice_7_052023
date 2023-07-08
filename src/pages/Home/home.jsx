@@ -5,7 +5,11 @@ import "../Home/home.scss";
 import "../Accommodations/accommodations.scss";
 
 function App() {
-  const logements = useFetch(window.location + "logements.json");
+  const logements = useFetch("/logements.json");
+
+  if (logements.isLoading) {
+    return "Chargement en cours";
+  }
 
   return (
     <div className="Home">

@@ -8,21 +8,21 @@ import Collapse from "../../components/Collapse/collapse";
 import "../Accommodations/accommodations.scss";
 
 function Logement() {
-  const logements = useFetch(window.location + "logements.json");
-  const {logementId} = useParams();
-  let thisLogement;
-  console.log(window.location +"logements.json")
-  if (logements.fetchedData) {
-    thisLogement = logements.fetchedData.find(
-      (logement) => logement.id === logementId
-    );
-  } else {
-    const [firstName, lastName] = thisLogement.host.name.split("");
-    document.title = thisLogement.title + "- Kasa";
-    return (
-      <div>
+  const logements = useFetch("/logements.json");
+  const { id } = useParams();
+  if (logements.isLoading) {
+    return "Chargement en cours";
+  }
+  const thisLogement = logements.fetchedData.find(
+    (logement) => logement.id === id
+  );
+
+  document.title = thisLogement.title + "logements.json";
+  return (
+    <div className="Accomodations">
+      <div className="truc">
         <Slider images={thisLogement.pictures} />
-        <div className="">
+        <div className="informations">
           <div className="titre-localisation-tag">
             <h1 className="titre">{thisLogement.title}</h1>
             <p className="localisation">{thisLogement.location}</p>
@@ -32,29 +32,32 @@ function Logement() {
               ))}
             </div>
           </div>
-          <div className="star-hote-truc">
-            <Star star={thisLogement.rating} />
-            <div className="">
-              <div className="hote">
-                {firstName}
-                <br />
-                {lastName}
+          <div className="name-host-star">
+            <div className="name-host">
+              <div className="name">
+                <p>{thisLogement.host.name}</p>
               </div>
+
               <img
-                className="host-picture"
+                className="host"
                 src={thisLogement.host.picture}
                 alt="Host"
               />
             </div>
+            <Star star={thisLogement.rating} />
           </div>
         </div>
-        <div>
-          <Collapse />
-          <Collapse />
+        <div className="List">
+          {/* <Collapse label="Description">
+            <p>{thisLogement.description}</p>
+          </Collapse>
+          <Collapse label="Equipements">
+            <p>{thisLogement.description}</p>
+          </Collapse> */}
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Logement;

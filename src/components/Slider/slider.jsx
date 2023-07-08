@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import "../Slider/slider.scss"
 
 
@@ -19,21 +20,17 @@ function Slider({images}) {
 	}
 
 	return (
-		<div className="gallery">
+		<div className="slider">
 			{length > 1 && (
-				<img
-					src={<FontAwesomeIcon icon={faChevronLeft} />}
-					className="left-arrow"
-					onClick={previousSlide}
-					alt="Previous Arrow"
+				<FontAwesomeIcon icon={faChevronLeft} 
+				className="left-chevron"
+				onClick={previousSlide}
 				/>
 			)}
 			{length > 1 && (
-				<img
-					src={<FontAwesomeIcon icon={faChevronLeft} />}
-					className="right-arrow"
-					onClick={nextSlide}
-					alt="Next Arrow"
+				<FontAwesomeIcon icon={faChevronRight} 
+				className="right-chevron"
+				onClick={nextSlide}
 				/>
 			)}
 			{images.map((slider, index) => {
