@@ -10,28 +10,28 @@ function App () {
         <img src={Image} alt="" />
       </div>
       <div className="List">
-        <Collapse className="medium" layout="full" label="Fiabilité">
+        <Collapse className="large" label="Fiabilité">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
             photos sont conformes aux logements, et toutes les informations sont
             régulièrement vérifiées par nos équipes.
           </p>
         </Collapse>
-        <Collapse active={false} label="Respect">
+        <Collapse className="large" label="Respect">
           <p>
             La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
             comportement discriminatoire ou de perturbation du voisinage
             entraînera une exclusion de notre plateforme.
           </p>
         </Collapse>
-        <Collapse className="medium" label="Service">
+        <Collapse className="large" label="Service">
           <p>
             Nos équipes se tiennent à votre disposition pour vous fournir une
             expérience parfaite. N'hésitez pas à nous contacter si vous avez la
             moindre question.
           </p>
         </Collapse>
-        <Collapse className="medium" label="Sécurité">
+        <Collapse className="large" label="Sécurité">
           <p>
             La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
             pour les voyageurs, chaque logement correspond aux critères de

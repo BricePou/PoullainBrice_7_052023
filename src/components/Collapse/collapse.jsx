@@ -11,7 +11,7 @@ const Collapsible = (props, active) => {
 
 
   return (
-    <div className={active ? "large" : "medium"}>
+    <div className={props.className}>
       <button onClick={toggle} className="btn">
         {props.label}
         <div className="chevron">
