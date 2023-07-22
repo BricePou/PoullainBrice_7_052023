@@ -3,14 +3,15 @@ import { useState } from "react";
 import "../Collapse/collapse.scss";
 import Chevron from "../Collapse/chevron";
 
-const Collapsible = (props) => {
+const Collapsible = (props, active) => {
   const [open, setOPen] = useState(false);
   const toggle = () => {
     setOPen(!open);
   };
 
+
   return (
-    <div className="buttons">
+    <div className={active ? "large" : "medium"}>
       <button onClick={toggle} className="btn">
         {props.label}
         <div className="chevron">

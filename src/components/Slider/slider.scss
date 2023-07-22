@@ -26,3 +26,23 @@
         color: #FFFFFF;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .slider{
+        img{
+            height: 255px;
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .left-chevron{
+            top: 90px;
+            width: 2rem;
+        }
+        .right-chevron{
+            top: 90px;
+            width: 2rem;
+        }
+    }
+
+  }

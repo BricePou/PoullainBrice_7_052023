@@ -10,3 +10,16 @@
         height: 24px;
     }
 }
+@media screen and (max-width: 650px) {
+    .stars{
+        .star{
+            width: 14px;
+            height: 13px;
+        }
+        .empty-star{
+            width: 14px;
+            height: 13px;
+        }
+    }
+
+}

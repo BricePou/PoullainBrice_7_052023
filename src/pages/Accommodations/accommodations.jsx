@@ -17,7 +17,7 @@ function Logement() {
     (logement) => logement.id === id
   );
 
-  document.title = thisLogement.title + "logements.json";
+  document.title = thisLogement.title;
   return (
     <div className="Accomodations">
       <div className="truc">
@@ -48,12 +48,12 @@ function Logement() {
           </div>
         </div>
         <div className="List">
-          {/* <Collapse label="Description">
+          <Collapse className="medium" label="Description">
             <p>{thisLogement.description}</p>
           </Collapse>
-          <Collapse label="Equipements">
+          <Collapse className="medium" label="Equipements">
             <p>{thisLogement.description}</p>
-          </Collapse> */}
+          </Collapse>
         </div>
       </div>
     </div>

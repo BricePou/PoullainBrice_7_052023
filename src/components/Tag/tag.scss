@@ -14,3 +14,18 @@
         font-size: 0.9em;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .Tag{
+        min-width: 84px;
+        border-radius: 5px;
+        height: 18px;
+        padding-left: 5px;
+        padding-right: 5px;
+        p{
+            white-space: nowrap;
+            font-size: 0.7em;
+        }
+    }
+
+}

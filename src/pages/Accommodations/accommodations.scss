@@ -16,14 +16,16 @@
           .titre {
             color: #ff6060;
             font-size: clamp(1rem, 2.5vw, 4rem);
+            margin: 0;
           }
           .localisation {
             color: #ff6060;
-            padding-top: 3px;
             font-size: clamp(0.9rem, 2.5vw, 1.1rem);
           }
           .tag {
             display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
             padding-top: 15px;
             .Tag {
               margin-right: 15px;
@@ -36,6 +38,7 @@
             align-items: center;
             .name {
               color: #ff6060;
+              font-size: 1.1em;
             }
             img {
               width: 65px;
@@ -43,7 +46,7 @@
             }
           }
           .stars {
-            margin-top: 10px;
+            padding-top: 20px;
             .star,
             .empty-star {
               padding-left: 10px;
@@ -57,36 +60,49 @@
     }
   }
 }
-@media screen and (max-width: 700px) {
-  .Accomodations {
-    .truc {
-      .informations {
-        flex-wrap: wrap;
-        .titre-localisation-tag {
-          .titre {
-          }
-          .localisation {
-          }
-          .tag {
-            .Tag {
+@media screen and (max-width: 650px) {
+  .content{
+    .Accomodations {
+      .truc {
+        .informations {
+          flex-wrap: wrap;
+
+          .titre-localisation-tag {
+            .titre {
+              font-size: 1.2em;
+            }
+            .localisation {
+              font-size: 0.9em;
             }
           }
-        }
-        .name-host-star {
-          flex-direction: row-reverse;
-          .name-host {
-            .name {
+          .name-host-star {
+            margin-top: 20px;
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            .name-host {
+              .name {
+                p{
+                  font-size: 0.9em;
+                }
+              }
+              img {
+                width: 32px;
+              }
             }
-            img {
-            }
-          }
-          .stars {
-            .star,
-            .empty-star {
+            .stars {
+              align-items: center;
+              padding-top: 0;
+              .star,
+              .empty-star {
+                padding-left: 5px;
+              }
             }
           }
         }
       }
     }
   }
+
 }
