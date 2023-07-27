@@ -16,7 +16,7 @@ const Collapsible = (props, active) => {
         {props.label}
         <div className="chevron">
           <div className="chevron-Up">
-            <Chevron />
+            <Chevron isOpen={open}/>
           </div>
         </div>
       </button>

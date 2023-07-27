@@ -1,4 +1,4 @@
-.Home {
+.home {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -39,7 +39,7 @@
 }
 
 @media screen and (max-width: 762px) {
-  .Home{
+  .home{
     .accueil{
       img{
         height: 111px;

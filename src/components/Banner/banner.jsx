@@ -4,7 +4,7 @@ import Image from "../../assets/IMGhome.png";
 
 function Banner() {
     return (
-      <div className="Home">
+      <div className="home">
         <div className="accueil">
           <img src={Image} alt="" />
           <p className="textimg">Chez vous, partout et ailleurs</p>

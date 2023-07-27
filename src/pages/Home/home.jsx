@@ -12,7 +12,7 @@ function App() {
   }
 
   return (
-    <div className="Home">
+    <div className="home">
       <div className="banner">
         <Banner />
       </div>
