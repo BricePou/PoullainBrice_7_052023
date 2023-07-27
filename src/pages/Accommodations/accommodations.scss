@@ -1,10 +1,10 @@
 .content {
   padding: 20px;
-  .Accomodations {
+  .accomodations {
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    .truc {
+    .slider-information {
       width: 1240px;
       .informations {
         display: flex;
@@ -15,19 +15,21 @@
         .titre-localisation-tag {
           .titre {
             color: #ff6060;
-            font-size: clamp(1rem, 2.5vw, 4rem);
+            font-size: 2.1rem;
+            font-weight: 500;
             margin: 0;
           }
           .localisation {
             color: #ff6060;
             font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            font-weight: 500;
           }
-          .tag {
+          .all-tag {
             display: flex;
             flex-wrap: wrap;
             row-gap: 10px;
             padding-top: 15px;
-            .Tag {
+            .tag {
               margin-right: 15px;
             }
           }
@@ -39,9 +41,11 @@
             .name {
               color: #ff6060;
               font-size: 1.1em;
+              font-weight: 500;
             }
             img {
               width: 65px;
+              margin-left: 10px;
               border-radius: 100px;
             }
           }
@@ -60,13 +64,12 @@
     }
   }
 }
-@media screen and (max-width: 650px) {
-  .content{
-    .Accomodations {
-      .truc {
+@media screen and (max-width: 762px) {
+  .content {
+    .accomodations {
+      .slider-information {
         .informations {
           flex-wrap: wrap;
-
           .titre-localisation-tag {
             .titre {
               font-size: 1.2em;
@@ -83,7 +86,7 @@
             align-items: center;
             .name-host {
               .name {
-                p{
+                p {
                   font-size: 0.9em;
                 }
               }
@@ -104,5 +107,4 @@
       }
     }
   }
-
 }

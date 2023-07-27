@@ -15,13 +15,13 @@
     padding: 5px 10px;
     padding-left: 20px;
   }
-  .Accueil{
+  .accueil{
     position: relative;
     img{
       filter:brightness(0.7);
     }
   }
-  .Cards {
+  .cards {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -38,34 +38,32 @@
   }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 762px) {
   .Home{
+    .accueil{
+      img{
+        height: 111px;
+      }
+    }
     padding-top: 16px;
     .textimg {
       left: 25px;
-      top: 80px;
-      padding-left: 20px;
+      top: 30px;
+      padding-left: 10px;
+      font-size: 1.3em;
     }
-    .Cards{
+    .cards{
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
       justify-content: center; 
-      row-gap: 120px;
+      row-gap: 30px;
       padding: 0;
-      margin-bottom: 120px;
+      margin-bottom: 30px;
       align-items: center;
       background-color: white;
 
     }
   }
   
-}
-
-@media screen and (max-width: 437px) {
-  .Home{
-    .textimg{
-      top: 60px;
-    }
-  }
 }

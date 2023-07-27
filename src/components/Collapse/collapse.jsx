@@ -15,7 +15,7 @@ const Collapsible = (props, active) => {
       <button onClick={toggle} className="btn">
         {props.label}
         <div className="chevron">
-          <div className="Chevron-Up">
+          <div className="chevron-Up">
             <Chevron />
           </div>
         </div>

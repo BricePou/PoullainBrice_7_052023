@@ -1,4 +1,4 @@
-.Accueil {
+.accueil {
     img {
       max-width: 1240px;
       border-radius: 25px;
@@ -8,9 +8,9 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   
-  .Accueil {
+  .accueil {
       img {
         border-radius: 10px;
       }

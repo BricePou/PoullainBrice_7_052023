@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 
 function Card({ link, cover, title }) {
 	return (
-		<div className="Card">
+		<div className="card">
 			<Link to={link}>
-				<div className="Card-cover">
+				<div className="card-cover">
 					<img src={cover} alt="" />
 				</div>
-				<h2 className="Card-title">{title}</h2>
+				<h2 className="card-title">{title}</h2>
 			</Link>
 		</div>
 	)

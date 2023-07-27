@@ -1,5 +1,6 @@
 import React from "react";
 import useFetch from "../../useFetch/useFetch";
+import Error from "../Error/error";
 import { useParams } from "react-router-dom";
 import Slider from "../../components/Slider/slider";
 import Star from "../../components/Star/star";
@@ -16,18 +17,21 @@ function Logement() {
   const thisLogement = logements.fetchedData.find(
     (logement) => logement.id === id
   );
+  if (!thisLogement){
+    return <Error />
+  }
   const splitName = thisLogement.host.name.split(' ')
 
   document.title = thisLogement.title;
   return (
-    <div className="Accomodations">
-      <div className="truc">
+    <div className="accomodations">
+      <div className="slider-information">
         <Slider images={thisLogement.pictures} />
         <div className="informations">
           <div className="titre-localisation-tag">
             <h1 className="titre">{thisLogement.title}</h1>
             <p className="localisation">{thisLogement.location}</p>
-            <div className="tag">
+            <div className="all-tag">
               {thisLogement.tags.map((tag, index) => (
                 <Tag tagName={tag} key={`${tag}-${index}`} />
               ))}
@@ -48,7 +52,7 @@ function Logement() {
             <Star star={thisLogement.rating} />
           </div>
         </div>
-        <div className="List">
+        <div className="list">
           <Collapse className="medium" label="Description">
             <p>{thisLogement.description}</p>
           </Collapse>

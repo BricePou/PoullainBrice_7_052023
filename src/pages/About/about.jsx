@@ -5,11 +5,11 @@ import Image from "../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2aPropos.png"
 
 function App () {
   return (
-    <div className="About">
-      <div className="Accueil">
+    <div className="about">
+      <div className="accueil">
         <img src={Image} alt="" />
       </div>
-      <div className="List">
+      <div className="list">
         <Collapse className="large" label="Fiabilité">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les

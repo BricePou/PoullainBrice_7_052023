@@ -1,4 +1,4 @@
-.Tag{
+.tag{
     background-color: #FF6060;
     min-width: 95px;
     height: 25px;
@@ -15,8 +15,8 @@
     }
 }
 
-@media screen and (max-width: 650px) {
-    .Tag{
+@media screen and (max-width: 762px) {
+    .tag{
         min-width: 84px;
         border-radius: 5px;
         height: 18px;

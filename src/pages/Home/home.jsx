@@ -13,11 +13,11 @@ function App() {
 
   return (
     <div className="Home">
-      <div className="Banner">
+      <div className="banner">
         <Banner />
       </div>
       {logements.fetchedData && (
-        <div className="Cards">
+        <div className="cards">
           {logements.fetchedData.map((files) => (
             <Card
               key={files.id}
@@ -33,5 +33,3 @@ function App() {
 }
 
 export default App;
-
-// "logements.json"
