@@ -1,17 +1,16 @@
-import "../Banner/banner.scss"
-import React from "react"
+import "../Banner/banner.scss";
+import React from "react";
 import Image from "../../assets/IMGhome.png";
 
 function Banner() {
-    return (
-      <div className="Home">
-        <div className="Accueil">
-          <img src={Image} alt="" />
-          <p className="textimg">Chez vous, partout et ailleurs</p>
-        </div>
+  return (
+    <div className="home">
+      <div className="accueil">
+        <img src={Image} alt="" />
+        <p className="textimg">Chez vous, partout et ailleurs</p>
       </div>
-    );
-  }
-  
-  export default Banner;
-  
+    </div>
+  );
+}
+
+export default Banner;

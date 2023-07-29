@@ -1,10 +1,9 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import Header from '../../components/Header/header';
-import Footer from '../../components/Footer/footer';
-import "../Layout/layout.scss"
-// import "../Layout/normalize.scss"
-
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "../../components/Header/header";
+import Footer from "../../components/Footer/footer";
+import "../Layout/normalize.scss";
+import "../Layout/layout.scss";
 
 const Layout = () => {
   return (

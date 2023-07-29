@@ -1,9 +1,11 @@
 header {
   max-width: 1240px;
-  margin: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-basis: 100%;
   justify-content: space-between;
@@ -13,36 +15,55 @@ header {
   ul {
     display: flex;
     justify-content: space-between;
-    flex-basis: 100%;
     margin: auto;
-    padding: 0
-  ;
+    padding: 0;
     list-style-type: none;
     li {
+      width: 120px;
       display: flex;
       justify-content: center;
       align-items: center;
-      :hover {
-        text-decoration: underline;
-      }
+      white-space: nowrap;
       .font {
         display: flex;
-        padding-left: 10px;
+        padding-left: 20px;
         text-decoration: none;
         color: #ff6060;
-        font-size: 1.5em;
-        font-size : clamp(1rem, 2.5vw, 1.5rem);
+        font-size: 1.3em;
         flex-basis: auto;
+      }
+      .font:hover {
+        text-decoration: underline;
       }
     }
   }
   nav {
     display: flex;
     justify-content: space-between;
-    flex-basis: 25%;
+  }
+  div {
+    width: auto;
+    .LogoHeader {
+      width: 100%;
+      height: auto;
+    }
   }
 }
-.LogoHeader{
-  height: auto;
-  width: 100%;
+
+@media only screen and (max-width: 768px) {
+  header {
+    ul {
+      li {
+        width: auto;
+        .font {
+          font-size: 0.8em;
+          text-transform: uppercase;
+        }
+      }
+    }
+    div {
+      width: 150px;
+      height: auto;
+    }
+  }
 }

@@ -1,21 +1,11 @@
-import React from "react";
-import "../Tag/tag.scss"
+import "../Tag/tag.scss";
 
-class Tag extends React.Component {
-  render() {
-    return <div className="Tag">
-      <p>{this.props.name}</p>
-    </div>
-  }
-}
-
-function Name() {
+function Tag({ tagName }) {
   return (
-    <div>
-      <Tag name="Brice" />
+    <div className="tag">
+      <p>{tagName}</p>
     </div>
   );
 }
 
-
-export default Name;
+export default Tag;

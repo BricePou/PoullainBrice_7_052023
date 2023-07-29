@@ -1,16 +1,110 @@
-.informations {
-    .First-part{
-        .title{
-            color: #FF6060;
+.content {
+  padding: 20px;
+  .accomodations {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .slider-information {
+      width: 1240px;
+      .informations {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1240px;
+        margin-top: 20px;
+        .titre-localisation-tag {
+          .titre {
+            color: #ff6060;
+            font-size: 2.1rem;
+            font-weight: 500;
+            margin: 0;
+          }
+          .localisation {
+            color: #ff6060;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            font-weight: 500;
+          }
+          .all-tag {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            padding-top: 15px;
+            .tag {
+              margin-right: 15px;
+            }
+          }
         }
-        .localistation{
-            color: #FF6060;
+        .name-host-star {
+          .name-host {
+            display: flex;
+            align-items: center;
+            .name {
+              color: #ff6060;
+              font-size: 1.1em;
+              font-weight: 500;
+            }
+            img {
+              width: 65px;
+              margin-left: 10px;
+              border-radius: 100px;
+            }
+          }
+          .stars {
+            padding-top: 20px;
+            .star,
+            .empty-star {
+              padding-left: 10px;
+            }
+          }
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
         }
+      }
     }
-    .Second-part{
-        .propiétaire{
-            color: #FF6060;
+  }
+}
+@media screen and (max-width: 762px) {
+  .content {
+    .accomodations {
+      .slider-information {
+        .informations {
+          flex-wrap: wrap;
+          .titre-localisation-tag {
+            .titre {
+              font-size: 1.2em;
+            }
+            .localisation {
+              font-size: 0.9em;
+            }
+          }
+          .name-host-star {
+            margin-top: 20px;
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            .name-host {
+              .name {
+                p {
+                  font-size: 0.9em;
+                }
+              }
+              img {
+                width: 32px;
+              }
+            }
+            .stars {
+              align-items: center;
+              padding-top: 0;
+              .star,
+              .empty-star {
+                padding-left: 5px;
+              }
+            }
+          }
         }
+      }
     }
-
+  }
 }

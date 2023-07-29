@@ -1,21 +1,17 @@
-.Accueil {
-  padding-top: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-    img {
-      border-radius: 25px;
-      height: 223px;
-      width: 100%;
-      object-fit: cover;
-    }
-}
-
-@media screen and (max-width: 500px) {
-  
-  .Accueil {
-      img {
-        border-radius: 10px;
-      }
+.accueil {
+  img {
+    max-width: 1240px;
+    border-radius: 25px;
+    height: 223px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .accueil {
+    img {
+      border-radius: 10px;
+    }
+  }
+}

@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React from "react";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Chevron = () => {
-    const [rotateChevron, setRotateChevron] = useState(false);
+const Chevron = ({ isOpen }) => {
+  const rotate = isOpen ? "rotate(180deg)" : "rotate(0)";
 
-    const handleRotate = () => setRotateChevron(!rotateChevron);
-
-    const rotate = rotateChevron ? "rotate(180deg)" : "rotate(0)"
-
-    return (
-        <FontAwesomeIcon icon={faChevronDown} style={{ transform: rotate, transition: "all 0.2s linear" }} onClick={handleRotate} />
-      )
-}
+  return (
+    <FontAwesomeIcon
+      icon={faChevronDown}
+      style={{ transform: rotate, transition: "all 0.2s linear" }}
+    />
+  );
+};
 
 export default Chevron;
