@@ -14,11 +14,11 @@ const Collapsible = (props, active) => {
     <div className={props.className}>
       <button onClick={toggle} className="btn">
         {props.label}
-        <div className="chevron">
-          <div className="chevron-Up">
+        <span className="chevron">
+          <span className="chevron-Up">
             <Chevron isOpen={open}/>
-          </div>
-        </div>
+          </span>
+        </span>
       </button>
       {open && (
         <div className={open ? "content-show" : "content-parent"}>

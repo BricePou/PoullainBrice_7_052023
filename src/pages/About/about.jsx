@@ -1,7 +1,7 @@
 import React from "react";
 import "../About/about.scss";
 import Collapse from "../../components/Collapse/collapse";
-import Image from "../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2aPropos.png"
+import Image from "../../assets/IMGabout.png"
 
 function App () {
   return (
