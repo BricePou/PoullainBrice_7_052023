@@ -1,4 +1,4 @@
-import  useFetch  from "../../useFetch/useFetch";
+import useFetch from "../../useFetch/useFetch";
 import Card from "../../components/Card/card";
 import Banner from "../../components/Banner/banner";
 import "../Home/home.scss";

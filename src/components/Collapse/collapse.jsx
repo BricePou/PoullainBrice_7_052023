@@ -9,14 +9,13 @@ const Collapsible = (props, active) => {
     setOPen(!open);
   };
 
-
   return (
     <div className={props.className}>
       <button onClick={toggle} className="btn">
         {props.label}
         <span className="chevron">
           <span className="chevron-Up">
-            <Chevron isOpen={open}/>
+            <Chevron isOpen={open} />
           </span>
         </span>
       </button>

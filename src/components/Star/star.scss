@@ -1,25 +1,24 @@
 .stars {
-    .star{
-        color: #FF6060;
-        width: 25px;
-        height: 24px;
-    }
-    .empty-star{
-        color: #E3E3E3;
-        width: 25px;
-        height: 24px;
-    }
+  .star {
+    color: #ff6060;
+    width: 25px;
+    height: 24px;
+  }
+  .empty-star {
+    color: #e3e3e3;
+    width: 25px;
+    height: 24px;
+  }
 }
 @media screen and (max-width: 762px) {
-    .stars{
-        .star{
-            width: 14px;
-            height: 13px;
-        }
-        .empty-star{
-            width: 14px;
-            height: 13px;
-        }
+  .stars {
+    .star {
+      width: 14px;
+      height: 13px;
     }
-
+    .empty-star {
+      width: 14px;
+      height: 13px;
+    }
+  }
 }

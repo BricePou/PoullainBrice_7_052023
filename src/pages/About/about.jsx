@@ -1,9 +1,9 @@
 import React from "react";
 import "../About/about.scss";
 import Collapse from "../../components/Collapse/collapse";
-import Image from "../../assets/IMGabout.png"
+import Image from "../../assets/IMGabout.png";
 
-function App () {
+function App() {
   return (
     <div className="about">
       <div className="accueil">
@@ -46,4 +46,4 @@ function App () {
   );
 }
 
-export default App ;
+export default App;

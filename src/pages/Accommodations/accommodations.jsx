@@ -17,10 +17,10 @@ function Logement() {
   const thisLogement = logements.fetchedData.find(
     (logement) => logement.id === id
   );
-  if (!thisLogement){
-    return <Error />
+  if (!thisLogement) {
+    return <Error />;
   }
-  const splitName = thisLogement.host.name.split(' ')
+  const splitName = thisLogement.host.name.split(" ");
 
   document.title = thisLogement.title;
   return (
@@ -40,7 +40,9 @@ function Logement() {
           <div className="name-host-star">
             <div className="name-host">
               <div className="name">
-                <p>{splitName[0]} <br/> {splitName[1]} </p>
+                <p>
+                  {splitName[0]} <br /> {splitName[1]}{" "}
+                </p>
               </div>
 
               <img

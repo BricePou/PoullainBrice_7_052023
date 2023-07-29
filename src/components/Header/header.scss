@@ -41,30 +41,29 @@ header {
     display: flex;
     justify-content: space-between;
   }
-  div{
+  div {
     width: auto;
-    .LogoHeader{
+    .LogoHeader {
       width: 100%;
       height: auto;
     }
   }
 }
 
-
 @media only screen and (max-width: 768px) {
-  header{
-    ul{
-      li{
+  header {
+    ul {
+      li {
         width: auto;
-        .font{
+        .font {
           font-size: 0.8em;
-          text-transform : uppercase;
+          text-transform: uppercase;
         }
       }
     }
-    div{
+    div {
       width: 150px;
       height: auto;
-      }
     }
   }
+}

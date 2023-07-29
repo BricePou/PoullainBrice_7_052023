@@ -1,15 +1,11 @@
-import "../Tag/tag.scss"
-
+import "../Tag/tag.scss";
 
 function Tag({ tagName }) {
   return (
     <div className="tag">
-      <p>
-      {tagName}
-      </p>
+      <p>{tagName}</p>
     </div>
   );
 }
-
 
 export default Tag;
