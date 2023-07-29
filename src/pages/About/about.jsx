@@ -4,6 +4,7 @@ import Collapse from "../../components/Collapse/collapse";
 import Image from "../../assets/IMGabout.png";
 
 function App() {
+  document.title = "A propos";
   return (
     <div className="about">
       <div className="accueil">
