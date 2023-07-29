@@ -5,6 +5,7 @@ import "../Home/home.scss";
 import "../Accommodations/accommodations.scss";
 
 function App() {
+  document.title = "Kasa";
   const logements = useFetch("/logements.json");
 
   if (logements.isLoading) {
