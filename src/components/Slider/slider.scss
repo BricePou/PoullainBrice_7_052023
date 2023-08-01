@@ -1,6 +1,14 @@
 .slider {
   position: relative;
   z-index: 1;
+  .count{
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 1.1em;
+  }
   img {
     height: 415px;
     width: 100%;
@@ -29,6 +37,9 @@
 
 @media screen and (max-width: 762px) {
   .slider {
+    .count{
+      display: none;
+    }
     img {
       height: 255px;
       width: 100%;

@@ -33,6 +33,7 @@ function Slider({ images }) {
           onClick={nextSlide}
         />
       )}
+      <p className="count">{current+1}/{length}</p>
       {images.map((slider, index) => {
         return (
           <div
